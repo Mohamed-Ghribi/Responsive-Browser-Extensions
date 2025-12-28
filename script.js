@@ -109,7 +109,7 @@ lightMode.addEventListener('click',function(e){
 
 async function loadData(status) {
     try{
-        const response = await fetch("/data.json")
+        const response = await fetch("data.json")
         if(!response.ok) throw new Error("Erreur de chargement de fichier JSON")
         const data = await response.json();
         const container = document.createElement("div")
@@ -161,4 +161,5 @@ document.addEventListener("click",function(e){
 
 logo.addEventListener("click",function(){
     window.location.reload(true)
+
 })
